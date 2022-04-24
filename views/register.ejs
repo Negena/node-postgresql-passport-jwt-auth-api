@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title></title>
+  </head>
+  <body>
+    <h1>register</h1>
+    <ul>
+      <% if (typeof errors != "undefined") { %>
+        <% errors.forEach((error) => { %>
+          <li><%= error.msg %></li>
+        <% }) %>
+      <% } %>
+    </ul>
+
+    <form class="" action="/register" method="post">
+      <div>
+        <input
+         type="text"
+         name="name"
+         value=""
+         id="name"
+         placeholder="name"
+         required>
+      </div>
+
+      <div>
+        <input
+         type="text"
+         name="email"
+         value=""
+         id="email"
+         placeholder="email"
+         required>
+      </div>
+
+      <div>
+        <input
+         type="text"
+         name="password"
+         value=""
+         id="password"
+         placeholder="password"
+         required>
+      </div>
+
+      <div>
+        <input
+         type="text"
+         name="password2"
+         value=""
+         id="password2"
+         placeholder="confirm password"
+         required>
+      </div>
+      <div class="">
+        <input type="submit" name="" value="register">
+      </div>
+      <a href="/login">already registered? Login here</a>
+    </form>
+  </body>
+</html>
